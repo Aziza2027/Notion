@@ -1,0 +1,12 @@
+https://docs.streamlit.io/library/advanced-features/dataframes#additional-ui-features
+
+https://docs.streamlit.io/library/api-reference/data/st.dataframe
+
+
+https://blog.streamlit.io/editable-dataframes-are-here/
+
+kill -9 $(lsof -t -i:8050)
+
+
+column config:
+https://docs.streamlit.io/library/api-reference/data/st.column_config/st.column_config.column
