@@ -1,7 +1,7 @@
 
 import streamlit as st
 import pandas as pd
-
+st.set_page_config(layout="wide")
 file = './data.csv'
 
 df = pd.read_csv(file)
@@ -42,7 +42,7 @@ edited_df = st.data_editor(
             ],
         ),
         "Month": st.column_config.SelectboxColumn(
-            "Status",
+            "Month",
             help="The category of the app",
             width="medium",
             options=months,
