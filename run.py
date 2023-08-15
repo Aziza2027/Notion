@@ -1,7 +1,6 @@
-
 import streamlit as st
 import pandas as pd
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide",page_title="Kanban - 2023",page_icon="🗓️",initial_sidebar_state="collapsed")
 file = './data.csv'
 
 df = pd.read_csv(file)
@@ -51,7 +50,6 @@ edited_df = st.data_editor(
     },
 
     use_container_width=True,
-    height=height
     )
 
 def save_dataframe_to_csv():
