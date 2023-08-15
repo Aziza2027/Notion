@@ -1,7 +1,7 @@
 
 import streamlit as st
 import pandas as pd
-st.set_page_config(layout="wide")
+
 file = './data.csv'
 
 df = pd.read_csv(file)
@@ -28,7 +28,7 @@ with modification_container:
         to_filter_columns = months.copy()
 
 height = (df.shape[0] + 1) * 35 + 3 
-
+print(df.shape[0])
 edited_df = st.data_editor(
     df[df.Month.isin(to_filter_columns)], 
     num_rows='dynamic',
@@ -43,15 +43,15 @@ edited_df = st.data_editor(
             ],
         ),
         "Month": st.column_config.SelectboxColumn(
-            "Month",
+            "Status",
             help="The category of the app",
             width="medium",
             options=months,
         )
     },
 
-    use_container_width=True,
-    height=height
+    # use_container_width=True
+    height = height
     )
 
 def save_dataframe_to_csv():
